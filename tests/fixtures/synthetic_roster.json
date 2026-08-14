@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "coverage": "FULL",
+  "report_header": {
+    "period_from": "01Aug37",
+    "period_to": "01Oct37",
+    "port_local_notice_present": true
+  },
+  "rows": [
+    {
+      "source_index": 0,
+      "row_index": 1,
+      "start_date": "06Aug37",
+      "day": "Thu",
+      "flight_number": "ZX 410",
+      "sector": "SIN-TPE",
+      "duty": "FLY",
+      "rpt": "0945",
+      "std": "1145",
+      "sta": "1630",
+      "flight_time": "04:45",
+      "remarks": null,
+      "unreadable": []
+    },
+    {
+      "source_index": 0,
+      "row_index": 2,
+      "start_date": "07Aug37",
+      "day": "Fri",
+      "flight_number": "ZX 411",
+      "sector": "TPE-SIN",
+      "duty": "FLY",
+      "rpt": "1645",
+      "std": "1745",
+      "sta": "2215",
+      "flight_time": "04:30",
+      "remarks": null,
+      "unreadable": []
+    },
+    {
+      "source_index": 0,
+      "row_index": 3,
+      "start_date": "27Aug37",
+      "day": "Thu",
+      "flight_number": "ZX 420",
+      "sector": "SIN-ADL",
+      "duty": "FLY",
+      "rpt": "0620",
+      "std": "0820",
+      "sta": "1620",
+      "flight_time": "06:30",
+      "remarks": null,
+      "unreadable": []
+    },
+    {
+      "source_index": 0,
+      "row_index": 4,
+      "start_date": "29Aug37",
+      "day": "Sat",
+      "flight_number": "ZX 421",
+      "sector": "ADL-SIN",
+      "duty": "FLY",
+      "rpt": "0810",
+      "std": "0910",
+      "sta": "1450",
+      "flight_time": "07:10",
+      "remarks": null,
+      "unreadable": []
+    }
+  ]
+}

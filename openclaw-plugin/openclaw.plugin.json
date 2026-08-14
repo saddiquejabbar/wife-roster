@@ -1,0 +1,63 @@
+{
+  "id": "wife-roster-inbound",
+  "name": "wife-roster inbound",
+  "description": "Thin, allowlisted Telegram review and approval hook for wife-roster.",
+  "version": "0.3.0",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "groupId": { "type": "string", "minLength": 1 },
+      "allowedSenderIds": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "stateChangeSenderIds": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "botUsername": { "type": "string", "minLength": 1 },
+      "pythonBin": { "type": "string", "minLength": 1 },
+      "appSrc": { "type": "string", "minLength": 1 },
+      "vendorPath": { "type": "string", "minLength": 1 },
+      "promptPath": { "type": "string", "minLength": 1 },
+      "workingDirectory": { "type": "string", "minLength": 1 },
+      "extractionModel": {
+        "type": "string",
+        "pattern": "^[^/]+/[^/]+$",
+        "default": "openai/gpt-5.6-sol"
+      },
+      "workflowTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 600000,
+        "default": 300000
+      },
+      "extractionTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 600000,
+        "default": 300000
+      }
+    }
+  },
+  "uiHints": {
+    "groupId": { "label": "Allowed Telegram group" },
+    "allowedSenderIds": { "label": "Allowed Telegram senders" },
+    "stateChangeSenderIds": { "label": "Roster state-change senders" },
+    "botUsername": { "label": "Telegram bot username" },
+    "pythonBin": { "label": "Runtime Python", "advanced": true },
+    "appSrc": { "label": "Runtime application source", "advanced": true },
+    "vendorPath": { "label": "Runtime vendor path", "advanced": true },
+    "promptPath": { "label": "Roster transcription prompt", "advanced": true },
+    "workingDirectory": { "label": "Runtime working directory", "advanced": true },
+    "extractionModel": { "label": "Bounded image extraction model", "advanced": true }
+  }
+}

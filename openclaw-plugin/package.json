@@ -1,0 +1,25 @@
+{
+  "name": "wife-roster-inbound",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "clawpdf": "0.3.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.7.1"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}

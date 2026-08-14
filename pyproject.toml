@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wife-roster"
+version = "0.3.0"
+description = "Deterministic local airline crew-roster planning and dispatch"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "airportsdata>=20241001,<20270000",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+roster = "roster.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+source = ["roster"]

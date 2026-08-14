@@ -1,0 +1,43 @@
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Private roster evidence and runtime state
+runtime/
+private/
+inbox/
+real-rosters/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.log
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.heic
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
